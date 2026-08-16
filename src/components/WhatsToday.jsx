@@ -1,4 +1,5 @@
 import menuData from "../data/menuData";
+import FoodRating from "./FoodRating";
 
 import chapathi from "../assets/chapathi.jpg";
 import curdrice from "../assets/curdrice.jpg";
@@ -77,11 +78,6 @@ function WhatsToday() {
 
   const meal = menuData[today]?.[mealType] || "Mess Closed";
 
-  console.log("Today:", today);
-  console.log("Meal Type:", mealType);
-  console.log("Meal:", meal);
-  console.log("Image Found:", foodImages[meal]);
-
   return (
     <div className="card today-animation">
       <h2>📅 {today}</h2>
@@ -92,14 +88,16 @@ function WhatsToday() {
 
       <p>{meal}</p>
 
-<div className="food-card">
-  <img
-    src={foodImages[meal] || meals}
-    alt={meal}
-    className="food-image"
-  />
-</div>
-   </div>
+      <div className="food-card">
+        <img
+          src={foodImages[meal] || meals}
+          alt={meal}
+          className="food-image"
+        />
+      </div>
+
+      <FoodRating foodName={meal} />
+    </div>
   );
 }
 

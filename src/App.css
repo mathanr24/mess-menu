@@ -511,3 +511,23 @@ button.active {
     padding: 12px;
   }
 }
+
+.rating-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.star {
+  font-size: 2rem;
+  cursor: pointer;
+  opacity: 0.4;
+  transition: 0.3s;
+}
+
+.star.active {
+  opacity: 1;
+}
+
+.star:hover {
+  transform: scale(1.2);
+}
