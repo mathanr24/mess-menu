@@ -54,6 +54,16 @@ body::after {
   animation: moveBlob2 18s infinite alternate ease-in-out;
 }
 
+body {
+    background:
+        linear-gradient(rgba(5,10,40,0.95), rgba(5,10,40,0.95)),
+        url("./assets/food-bg.png");
+
+    background-size: 250px;
+    background-repeat: repeat;
+    opacity: 0.95;
+}
+
 .container {
   max-width: 1200px;
   margin: auto;
